@@ -1,7 +1,9 @@
 <html>
-<body onload="playbg()">
+<body>
     <head>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="style.css">
+        <title>Museo de la Rosa</title>
 
 <style>
 
@@ -15,7 +17,7 @@
 
 body{
    margin:0;
-   background-color: #43382c;
+   background-color: #201c17;
 
 }
 
@@ -326,6 +328,13 @@ font-family: "Pixelify Sans", sans-serif;
     margin-bottom: 250px;
 }
 
+.simbolos p {
+    color: antiquewhite;
+}
+
+.simbolos h3{
+    color: antiquewhite;
+}
 .simbolo{
     margin: 10px 20px;
     padding: 20px;
@@ -369,8 +378,9 @@ h2{
     margin: 40px 0px;
 }
 
-h3{
-    font-size: 30px;
+h2{
+    font-size: 40px;
+    color: antiquewhite;
 }
 
 .centered{
@@ -477,6 +487,10 @@ h3{
     
   }
 
+  h3{
+      font-size: 28px;
+  }
+
   .ficha h3 {
       margin: 0;
   }
@@ -509,6 +523,7 @@ h3{
     position: absolute;
     top: 200;
     z-index: 9;
+    left: -50;
   }
 
   .torch2{
@@ -518,6 +533,7 @@ h3{
     z-index: 9;
     -webkit-transform: scaleX(-1);
     transform: scaleX(-1);
+    right: -50;
   }
 
   .scroll-container{
@@ -619,6 +635,8 @@ h3{
 /* starts items positions*/
             
     </style>
+
+
     </head>
     <div id="camino">
         <!-- movable character here game-->
@@ -640,7 +658,7 @@ h3{
                       <p class=""> y sabiduría, pero también </p>
                       <p class=""> de peligros y laberintos.</p>
                       <p class=""> ¿Te atreves a entrar?</p>
-                      <button id="btn-start" class="btn-start pix bold">Seguir leyendo</button>
+                      <button id="btn-start" class="btn-start pix bold" onclick="bg.play()">Seguir leyendo</button>
 
                     </div>
                   </div>
@@ -651,12 +669,13 @@ h3{
         <div class="story-content" id="story-content">
             <img class="torch" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/8627def1-872a-4402-b733-9af0a6c43a30/d64qz0s-80c2d5bd-00eb-4dfd-89fd-29c35c775e8a.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzg2MjdkZWYxLTg3MmEtNDQwMi1iNzMzLTlhZjBhNmM0M2EzMFwvZDY0cXowcy04MGMyZDViZC0wMGViLTRkZmQtODlmZC0yOWMzNWM3NzVlOGEuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.ZxGSfhhVngB-eZvvaJXLrvPiFATmaKXnYgCpIgzFv8Y">
             <img class="torch2" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/8627def1-872a-4402-b733-9af0a6c43a30/d64qz0s-80c2d5bd-00eb-4dfd-89fd-29c35c775e8a.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzg2MjdkZWYxLTg3MmEtNDQwMi1iNzMzLTlhZjBhNmM0M2EzMFwvZDY0cXowcy04MGMyZDViZC0wMGViLTRkZmQtODlmZC0yOWMzNWM3NzVlOGEuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.ZxGSfhhVngB-eZvvaJXLrvPiFATmaKXnYgCpIgzFv8Y">
-
+            <img class="columnr" src="https://od.lk/s/NTdfODk2OTg4MzFf/right.png">
+            <img class="columnl" src="https://od.lk/s/NTdfODk2OTg4MzJf/left.png">
 
             <div id="story" class="story">
                 
                 <div class="book-section">
-                    <h2 class="pixbold"> Fragmento del manuscrito de Dom Adso de Melk
+                    <h2 class="pixbold" style="font-size: 40px; color: antiquewhite; position:relative; z-index: 9;"> Fragmento del manuscrito de Adso de Melk
                     </h2>
                     <div class="container">
                     <div class="right">
@@ -786,8 +805,7 @@ h3{
             <div class="simbolos">
                 <!-- simbolos are hidden and only shown when found in the scene, maybe add btn to reveal them -->
                 <h2 class="pixbold">Símbolos</h2>
-                <h3 class="pix">Encuentra todos los símbolos dentro del manuscrito para desbloquearlos.</h3>
-                
+                <p class="pix" style="color: antiquewhite;">Encuentra todos los símbolos dentro del manuscrito para desbloquearlos. Descifrados por el Barón de Melk.</p>
                 <div class="wrapper">
 
                 <div class="simbolo">
@@ -813,7 +831,7 @@ h3{
                     <div class="mystery" id="esfera2box">
                         <img class="item2" src="https://cdn.pixabay.com/photo/2023/07/15/02/24/question-mark-8127954_1280.png">
                         <div class="textosimb">
-                            <h3 class="pixbold">???</h3>
+                            <h3 class="pixbold" >???</h3>
                             <p>Y fue golpeada la tercera parte del sol, de la luna y de las estrellas...</p>
                         </div>
                     
@@ -910,8 +928,13 @@ h3{
                 </div>
                 
             </div>
+
 <div class="pixbold linea"> <h2>Línea de Tiempo</h2></div>
+<p style="color: antiquewhite; text-align: center;">Coloca tu cursor en cada ángel. <br> Organizado por la herbolaria Ashlee.</p>
             <div class="timeline-wrapper">
+                <img class="candle" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/f0f12ce4-c73d-460e-9644-c6baa804bd6c/d8loxz3-2c8733e7-b6a8-47a3-8bf9-1ed8008c33b5.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2YwZjEyY2U0LWM3M2QtNDYwZS05NjQ0LWM2YmFhODA0YmQ2Y1wvZDhsb3h6My0yYzg3MzNlNy1iNmE4LTQ3YTMtOGJmOS0xZWQ4MDA4YzMzYjUuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.Rn96OyVZ0qi6iiBzFmnZyYADHosvkJg7x4lI07_Lxz8">
+                <img class="candle2" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/f0f12ce4-c73d-460e-9644-c6baa804bd6c/d8loxz3-2c8733e7-b6a8-47a3-8bf9-1ed8008c33b5.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2YwZjEyY2U0LWM3M2QtNDYwZS05NjQ0LWM2YmFhODA0YmQ2Y1wvZDhsb3h6My0yYzg3MzNlNy1iNmE4LTQ3YTMtOGJmOS0xZWQ4MDA4YzMzYjUuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.Rn96OyVZ0qi6iiBzFmnZyYADHosvkJg7x4lI07_Lxz8">
+
                 <div class="scroll-container">
                     <img class="scroll" src="https://od.lk/s/NTdfODk2ODAxODVf/longscroll.png">
                     
@@ -961,6 +984,7 @@ h3{
             <div class="personajes">
                 <!-- fichas de los personajes, when clicked will say a quote narrado por elkin -->
                 <h2 class="pixbold" style="text-align: center;">Personajes</h2>
+                <p style="color: antiquewhite; text-align: center;">Clickea las imágenes de los personajes. Recopiladas por la Santa Mariana.</p>
                 <div class="wrapper">
                 <div class="ficha">
                     <img class="profile" onclick="guillermo.play()" src="https://od.lk/s/NTdfODk2NzgyMzNf/guillermo.jpeg">
@@ -1106,7 +1130,7 @@ h3{
                 <div class="opinion">
                     <img class="opinion-img" src="https://od.lk/s/NTdfODk2OTQxNTdf/ashlee.png">
                     <div>
-                        <h3 class="pixbold">Monja Ashlee</h3>
+                        <h3 class="pixbold">Herbolaria Ashlee</h3>
                         <p>Me parece muy interesante ver cómo la vida y muerte de los monjes podía ser definida por las palabras de un Inquisidor. Aquí fue donde entendí en su mayoría sobre por qué Guillermo consideraba que él no era nadie para juzgar el bien o el mal, ya que se ve a Bernardo cegado por la lujuria de la justicia, queriendo purificar la abadía sin darle mucha importancia a los que realmente eran los pecadores. 
                         </p>
                     </div>
@@ -1135,9 +1159,6 @@ h3{
 
 <script>
 
-    function playbg(){
-        bg.play()
-    }
 
     var right = document.getElementsByClassName("right");
     var si = right.length;
