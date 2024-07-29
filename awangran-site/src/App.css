@@ -1,0 +1,189 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+section {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 50px 0px 20px 0px;
+
+}
+
+h1, h2, h3{
+  font-family: Single Day;
+  font-weight: 400;
+  text-align: center;
+  text-transform: lowercase;
+}
+
+h1{
+  color: #FFAC81;
+  -webkit-text-stroke: 2px #FF928B;
+  display: flex;
+}
+
+h2{
+  color: #FF928B;
+  -webkit-text-stroke: 3px #FFAC81;
+}
+
+h3{
+  color: #FFAC81;
+}
+
+p{
+  font-family: "Ubuntu Mono", monospace;
+  color: #FFAC81;
+}
+
+ul{
+  font-family: "Ubuntu Mono", monospace;
+  color: #FFAC81;
+}
+
+
+.btn {
+  width: 200px;
+  height: 50px;
+  font-size: 18px;
+  border: solid;
+  border-color: #FFAC81;
+  border-radius: 50px;
+  color: #FFAC81;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.4s;
+  font-family: "Ubuntu Mono", monospace;
+}
+
+.btn:hover {
+  box-shadow: inset 0 0 0 2px #FF928B, 
+              inset 0 0 0 4px #FF928B, 
+              inset 0 0 0 6px #EFE9AE,
+              inset 0 0 0 8px #CDEAC0;
+  background: #B7E0A3;
+  color: #fff;
+}
+
+
+
+.logo-slider {
+    overflow: hidden;
+    padding: 30px 0 0 0;
+    white-space: nowrap;
+    position: relative;
+    
+}
+
+.logo-slider:hover .logos-slide {
+    animation-play-state: paused;
+}
+
+.logos-slide {
+    display: inline-block;
+    animation: 45s slide infinite linear;
+    display: flex;
+    flex-direction: row;
+}
+
+.logos-slide img {
+    width: 183px;
+    height: 83px;
+    margin: 0 40px;
+}
+
+
+@keyframes slide {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+.cards{
+  display: flex;
+  flex-direction: column;
+}
+
+.card{
+  width: 80vw;
+  border-radius: 30px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.icon:hover{
+  transition: .3s;
+  text-shadow: 0 0 5px #fff;
+}
+
+.icon::before {
+  transform: scale(1.1);
+  transition: .3s;
+
+}
+.banner{
+  height: 60%;
+  border-radius: 30px;
+
+}
+
+.clouds{
+  width: 100vw;
+}
+
+.iconbar{
+  font-size: 60px;
+}
+
+.iconbar:hover{
+  transition: .3s;
+  text-shadow: 0 0 5px #bbb475;
+}
+
+.spotify iframe{
+  border-radius:12px;
+  width: 90%;
+}
+
+.spotify{
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+}
+
+
+
+.my-socials{
+  display: flex;
+  flex-direction: row;
+}
+
+.socialdiv{
+  width: 50%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.headshot{
+  width: 40%;
+  margin-bottom: 40px;
+  align-self: start;
+  margin-left: 20%;
+}
+
+.headshot img{
+  border: solid;
+  border-width: 10px;
+  border-color: #EFE9AE;
+  border-radius: 50%;
+}

@@ -10,6 +10,7 @@ function App() {
     <section id='landing'>
       <h1 className='text-9xl	mt-4'>awangran</h1>
       <h3 className='text-4xl	m-3'>hi! im ash. i like cats and creating stuff.  </h3>
+      <p className='underline'>page under construction</p>
       <button className="btn m-5">get to know me</button>
     </section>
 
@@ -33,7 +34,7 @@ function App() {
         <img src="/src/assets/icons/python.png" />
         <img src="/src/assets/icons/reacy.png" />
         <img src="/src/assets/icons/ts.png" />
-        <img src="/src/assets/icons/git.png" />
+        {/* <img src="/src/assets/icons/git.png" /> */}
 
       </div>
     </div>
@@ -102,12 +103,43 @@ function App() {
 
     <section id='awards'>
     <h2 className='text-6xl'>awards/experience</h2>
-
+    <div>
+      <ul>
+        <li>1st place high school national programming contest</li>
+        <li>1st anahuac environmental enginnering contest</li>
+        <li>1st anahuac environmental enginnering contest</li>
+        <li>1st anahuac environmental enginnering contest</li>
+        <li>1st anahuac environmental enginnering contest</li>
+      </ul> 
+    </div>
+    <img className='clouds' src='src/assets/clouds.png'></img>
 
     </section>
 
 
     <section id='socials'>
+    <h2 className='text-6xl'>socials</h2>
+    <p className=''>interested in what i do? send an email to work together <br></br>or stalk my social media</p>
+    <div className='my-socials my-10'>
+      <div className='socialdiv'>
+        <div className='headshot'>
+          <img src='src/assets/mishuheadshot.png'></img>
+          
+        </div>
+        <div className='socialbar'>
+        <i className="text-yellow iconbar mx-4 fa-brands fa-github"></i>
+        <i className="text-yellow iconbar mx-4 fa-regular fa-envelope"></i>
+        <i className="text-yellow iconbar mx-4 fa-brands fa-linkedin-in"></i>
+        <i className="text-yellow iconbar mx-4 fa-brands fa-slack"></i>
+        </div>
+
+      </div>
+      <div className='spotify'>
+      <iframe src="https://open.spotify.com/embed/playlist/0RM391APrQSsUMHiFkYsRH?utm_source=generator" width="100%" height="352" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+      </div>
+
+    </div>
+
 
     </section>
     
