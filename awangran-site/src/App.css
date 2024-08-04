@@ -75,6 +75,7 @@ ul{
     padding: 30px 0 0 0;
     white-space: nowrap;
     position: relative;
+    width: 90vw;
     
 }
 
@@ -95,6 +96,13 @@ ul{
     margin: 0 40px;
 }
 
+@media only screen and (max-width: 768px){
+  .logos-slide img {
+    width: 163px;
+    height: 63px;
+    margin: 0 20px;
+}
+}
 
 @keyframes slide {
     from {
@@ -186,4 +194,8 @@ ul{
   border-width: 10px;
   border-color: #EFE9AE;
   border-radius: 50%;
+}
+
+.overflow{
+  overflow-wrap: break-word;
 }

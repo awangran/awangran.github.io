@@ -5,19 +5,19 @@ function App() {
  
   return (
     <div id='main'>
-      <div id="inner" className="bg-[url('/assets/texture.png')]">
+      <div id="inner">
 
     <section id='landing'>
       {/* <h1 className='text-9xl	mt-4'>awangran</h1> */}
       <img className='title' src='src/assets/title.png'></img>
       <h3 className='text-4xl	m-3'>hi! im ash. i like cats and creating stuff.  </h3>
       <p className='underline'>page under construction</p>
-      <button className="btn m-5">get to know me</button>
+      <button className="btn m-5" onClick={() => document.getElementById('about-me').scrollIntoView()}>get to know me</button>
     </section>
 
     <section id='about-me'>
       <h2 className='text-6xl'>about me</h2>
-      <p className='text-xl mx-20'>im a freshman comp sci student @ universidad de los andes. im into front-end development, quantum computing and electronics. i like doing hackathons and reading wuxia novels. i hope to learn more about cybersec and do more hardware projects. <br></br> in my free time i normally play violin, water plants, draw or cultivate to go beyond mortal limits.</p>
+      <p className='text-xl mx-6'>im a freshman comp sci student @ universidad de los andes. im into front-end development, quantum computing and electronics. i like doing hackathons and reading wuxia novels. i hope to learn more about cybersec and do more hardware projects. <br></br> in my free time i normally play violin, water plants, draw or cultivate to go beyond mortal limits.</p>
       
     </section>
 
@@ -112,9 +112,9 @@ function App() {
     </section>
 
     <section id='awards'>
-    <h2 className='text-6xl'>awards/experience</h2>
+    <h2 className='text-6xl overflow'>awards / experience</h2>
     <div>
-      <ul>
+      <ul className='px-6'>
         <li>1st Place VI Colombian National High School Programming Contest </li>
         <li>1st LIT Enviromental Engineering Contest Anahuac Merida University</li>
         <li>Bow Seat Future Blue Youth Council Member '22</li>
