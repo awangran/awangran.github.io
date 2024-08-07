@@ -1,13 +1,25 @@
-import { useState } from 'react'
-import './App.css'
+import { useEffect } from 'react';
+import './App.css';
+import Aos from 'aos'
+import 'aos/dist/aos.css'
+import PreLoader from './component/PreLoader.jsx'
 
 function App() {
+  useEffect(()=>{
+    Aos.init({
+      duration:2000
+    });
+  }, [])
  
   return (
+    <>
+    <PreLoader/>
+
+
     <div id='main'>
       <div id="inner">
 
-    <section id='landing'>
+    <section id='landing' data-aos='fade-up'>
       {/* <h1 className='text-9xl	mt-4'>awangran</h1> */}
       <img className='title' src='src/assets/title.png'></img>
       <h3 className='text-4xl	m-3'>hi! im ash. i like cats and creating stuff.  </h3>
@@ -15,14 +27,14 @@ function App() {
       <button className="btn m-5" onClick={() => document.getElementById('about-me').scrollIntoView()}>get to know me</button>
     </section>
 
-    <section id='about-me'>
+    <section id='about-me' data-aos='fade-up'>
       <h2 className='text-6xl'>about me</h2>
       <p className='text-xl mx-6'>im a freshman comp sci student @ universidad de los andes. im into front-end development, quantum computing and electronics. i like doing hackathons and reading wuxia novels. i hope to learn more about cybersec and do more hardware projects. <br></br> in my free time i normally play violin, water plants, draw or cultivate to go beyond mortal limits.</p>
       
     </section>
 
-    <section id='skills'>
-    <h2 className='text-6xl'>skills</h2>
+    <section id='skills' data-aos='fade-up'>
+    <h2 className='text-6xl wow bounceIn'>skills</h2>
 
     <div className="logo-slider" id='logo-slider'>
       <div className="logos-slide" id='logos-slide'>
@@ -44,10 +56,10 @@ function App() {
     </section>
 
     <section id='proyects'>
-    <h2 className='text-6xl'>projects</h2>
+    <h2 className='text-6xl' data-aos='fade-up'>projects</h2>
     <div className='cards'>
 
-      <div className='card text-4xl text-center bg-pink my-6'>
+      <div className='card text-4xl text-center bg-pink my-6' data-aos="fade-left">
         <img className='banner' src='src/assets/banners/1.png'></img>
         
             <h3 className='mt-4 ml-6 text-yellow'>Niveles de Niveles</h3>
@@ -60,7 +72,7 @@ function App() {
             </div>
       </div>
 
-      <div className='card text-4xl text-center bg-salmon my-6'>
+      <div className='card text-4xl text-center bg-salmon my-6' data-aos="fade-right">
         <img className='banner' src='src/assets/banners/2.png'></img>
         
             <h3 className='mt-4 ml-6 text-pink'>Devoided</h3>
@@ -73,7 +85,7 @@ function App() {
             </div>
       </div>
 
-      <div className='card text-4xl text-center bg-yellow my-6'>
+      <div className='card text-4xl text-center bg-yellow my-6' data-aos="fade-left">
         <img className='banner' src='src/assets/banners/3.png'></img>
         
             <h3 className='mt-4 ml-6 text-orange'>Flower pcb nfc card</h3>
@@ -84,7 +96,7 @@ function App() {
             </div>
       </div>
 
-      <div className='card text-4xl text-center bg-lime my-6'>
+      <div className='card text-4xl text-center bg-lime my-6' data-aos="fade-right">
         <img className='banner' src='src/assets/banners/4.png'></img>
         
             <h3 className='mt-4 ml-6 text-orange'>Hackathon projects</h3>
@@ -95,7 +107,7 @@ function App() {
             </div>
       </div>
 
-      <div className='card text-4xl text-center bg-green my-6'>
+      <div className='card text-4xl text-center bg-green my-6' data-aos="fade-left">
         <img className='banner' src='src/assets/banners/5.png'></img>
         
             <h3 className='mt-4 ml-6 text-pink'>Shu</h3>
@@ -111,7 +123,7 @@ function App() {
 
     </section>
 
-    <section id='awards'>
+    <section id='awards' data-aos='fade-up'>
     <h2 className='text-6xl overflow'>awards / experience</h2>
     <div>
       <ul className='px-6'>
@@ -134,7 +146,7 @@ function App() {
     </section>
 
 
-    <section id='socials'>
+    <section id='socials' data-aos='fade-up'>
     <h2 className='text-6xl'>socials</h2>
     <p className=''>interested in what i do? send an email to work together <br></br>or stalk my social media</p>
     <div className='my-socials my-10'>
@@ -163,6 +175,7 @@ function App() {
     
     </div>
     </div>
+    </>
   )
 }
 
