@@ -1,5 +1,6 @@
 import {gsap} from "gsap";
 
+
 // Declare a general timeline to use in all the animation functions.
 
 const tl = gsap.timeline();
@@ -15,12 +16,12 @@ export const preLoaderAnim = () => {
       duration: 0.05,
       css: { overflowY: "hidden", height: "90vh" },
     })
-    .to(".texts-container", {
+    .to(".text-container", {
       duration: 0,
       opacity: 1,
       ease: "Power3.easeOut",
     })
-    .from(".texts-container span img", {
+    .from(".text-container span img", {
       duration: 1.5,
       delay: 1,
       y: 70,
@@ -28,7 +29,7 @@ export const preLoaderAnim = () => {
       stagger: 0.4,
       ease: "Power3.easeOut",
     })
-    .to(".texts-container span img", {
+    .to(".text-container span img", {
       duration: 1,
       y: 70,
       skewY: -20,
