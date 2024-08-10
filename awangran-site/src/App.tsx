@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import './App.css';
 import Aos from 'aos'
 import 'aos/dist/aos.css'
@@ -10,7 +10,14 @@ function App() {
       duration:2000
     });
   }, [])
- 
+  
+
+  const ref = useRef<HTMLDivElement | null>(null);
+  const handleClick = () => {
+    ref.current?.scrollIntoView({behavior: 'smooth'});
+  };
+
+
   return (
     <>
     <PreLoader/>
@@ -24,13 +31,14 @@ function App() {
       <img className='title' src='src/assets/title.png'></img>
       <h3 className='text-4xl	m-3'>hi! im ash. i like cats and creating stuff.  </h3>
       <p className='underline'>page under construction</p>
-      <button className="btn m-5" onClick={() => document.getElementById('about-me').scrollIntoView()}>get to know me</button>
+      <button className="btn m-5" onClick={handleClick}>get to know me</button>
     </section>
 
-    <section id='about-me' data-aos='fade-up'>
-      <h2 className='text-6xl'>about me</h2>
-      <p className='text-xl mx-6'>im a freshman comp sci student @ universidad de los andes. im into front-end development, quantum computing and electronics. i like doing hackathons and reading wuxia novels. i hope to learn more about cybersec and do more hardware projects. <br></br> in my free time i normally play violin, water plants, draw or cultivate to go beyond mortal limits.</p>
-      
+    <section data-aos='fade-up'>
+      <div id='about-me' ref={ref}>
+       <h2 className='text-6xl'>about me</h2>
+        <p className='text-xl mx-6'>im a freshman comp sci student @ universidad de los andes. im into front-end development, quantum computing and electronics. i like doing hackathons and reading wuxia novels. i hope to learn more about cybersec and do more hardware projects. <br></br> in my free time i normally play violin, water plants, draw or cultivate to go beyond mortal limits.</p>
+      </div>
     </section>
 
     <section id='skills' data-aos='fade-up'>
