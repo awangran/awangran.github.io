@@ -151,11 +151,8 @@ function App() {
 
       </ul> 
     </div>
-    <img className='clouds' src='assets/clouds.png'></img>
+    <img className='clouds' src='assets/clouds.png mb-5'></img>
 
-    </section>
-
-    <section id='socials' data-aos='fade-up'>
     <h2 className='text-6xl'>socials</h2>
     <p className=''>interested in what i do? send an email to work together <br></br>or stalk my social media</p>
     
