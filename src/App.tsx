@@ -28,7 +28,7 @@ function App() {
 
     <section id='landing' data-aos='fade-up'>
       {/* <h1 className='text-9xl	mt-4'>awangran</h1> */}
-      <img className='title' src='assets/title.png'></img>
+      <img className='title' src='/images/title.png'></img>
       <h3 className='text-4xl	m-3'>hi! im ash. i like cats and creating stuff.  </h3>
       <p className='underline'>page under construction</p>
       <button className="btn m-5" onClick={handleClick}>get to know me</button>
@@ -46,16 +46,16 @@ function App() {
 
     <div className="logo-slider" id='logo-slider'>
       <div className="logos-slide" id='logos-slide'>
-        <img src="/assets/icons/css.png" />
-        <img src="/assets/icons/figma.png" />
-        <img src="/assets/icons/html.png" />
-        <img src="/assets/icons/js.png"/>
-        <img src="/assets/icons/mongo.png" />
-        <img src="/assets/icons/node.png" />
-        <img src="/assets/icons/python.png" />
-        <img src="/assets/icons/reacy.png" />
-        <img src="/assets/icons/ts.png" />
-        {/* <img src="/assets/icons/git.png" /> */}
+        <img src="/images/icons/css.png" />
+        <img src="/images/icons/figma.png" />
+        <img src="/images/icons/html.png" />
+        <img src="/images/icons/js.png"/>
+        <img src="/images/icons/mongo.png" />
+        <img src="/images/icons/node.png" />
+        <img src="/images/icons/python.png" />
+        <img src="/images/icons/reacy.png" />
+        <img src="/images/icons/ts.png" />
+        {/* <img src="/images/icons/git.png" /> */}
 
       </div>
     </div>
@@ -70,7 +70,7 @@ function App() {
  <div className='cards'>
 
       <div className='card text-4xl text-center bg-pink my-6' data-aos="fade-up">
-        <img className='banner' src='assets/banners/1.png'></img>
+        <img className='banner' src='/images/banners/1.png'></img>
         
             <h3 className='mt-4 ml-6 text-yellow'>Niveles de Niveles</h3>
             <p className='text-xl ml-6 text-yellow'>An early warning application that mitigate the consequences of natural disasters. This project won the XVII Concurso Nacional de Programación in Colombia. It is made with react-native with the use of websockets to provide aid to people in disaster prone areas. The app is free and published to the App Store and Google Play store.</p>
@@ -83,7 +83,7 @@ function App() {
       </div> 
 
        <div className='card text-4xl text-center bg-salmon my-6' data-aos="fade-up">
-        <img className='banner' src='assets/banners/2.png'></img>
+        <img className='banner' src='/images/banners/2.png'></img>
         
             <h3 className='mt-4 ml-6 text-pink'>Devoided</h3>
             <p className='text-xl ml-6 text-pink'>Devoided is an RPG game developed in a hackathon about quantum engineer that explores space-time in search of traces of a deck of ancient Earth, but in his search he becomes trapped in the past. Developed with Unity, and sprites were digitally drawn.</p>
@@ -96,7 +96,7 @@ function App() {
       </div> 
 
       <div className='card text-4xl text-center bg-yellow my-6' data-aos="fade-up">
-        <img className='banner' src='assets/banners/3.png'></img>
+        <img className='banner' src='/images/banners/3.png'></img>
         
             <h3 className='mt-4 ml-6 text-orange'>Flower pcb nfc card</h3>
             <p className='text-xl ml-6 text-orange'>Flower shaped pcb with nfc chip. Design focused electronics project that works as a presentation card and keychain. Inspired by Hack Club Hacker card tutorial.</p>
@@ -107,7 +107,7 @@ function App() {
       </div>
 
       <div className='card text-4xl text-center bg-lime my-6' data-aos="fade-up">
-        <img className='banner' src='assets/banners/4.png'></img>
+        <img className='banner' src='/images/banners/4.png'></img>
         
             <h3 className='mt-4 ml-6 text-orange'>Hackathon projects</h3>
             <p className='text-xl ml-6 text-orange'>Devpost hackathons portofolio. Hackathon projects that are created based on problematics like food oasis, reading disabilities, cerebral palsy research, etc. </p>
@@ -118,7 +118,7 @@ function App() {
       </div> 
 
       <div className='card text-4xl text-center bg-green my-6' data-aos="fade-up">
-        <img className='banner' src='assets/banners/5.png'></img>
+        <img className='banner' src='/images/banners/5.png'></img>
         
             <h3 className='mt-4 ml-6 text-pink'>Shu</h3>
             <p className='text-xl ml-6 text-pink'>Local media library with a twist. Coming soon...</p>
@@ -151,7 +151,7 @@ function App() {
 
       </ul> 
     </div>
-    <img className='clouds' src='assets/clouds.png mb-5'></img>
+    <img className='clouds mb-5' src='/images/clouds.png'></img>
 
     <h2 className='text-6xl'>socials</h2>
     <p className=''>interested in what i do? send an email to work together <br></br>or stalk my social media</p>
@@ -159,7 +159,7 @@ function App() {
     <div className='my-socials my-10'>
       <div className='socialdiv'>
         <div className='headshot'>
-          <img src='assets/mishuheadshot.png'></img>
+          <img src='/images/mishuheadshot.png'></img>
           
         </div>
         <div className='socialbar'>
