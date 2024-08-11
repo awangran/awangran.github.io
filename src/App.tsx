@@ -63,11 +63,13 @@ function App() {
 
     </section>
 
-    <section id='proyects'>
+     <section id='proyects'>
     <h2 className='text-6xl' data-aos='fade-up'>projects</h2>
-    <div className='cards'>
+ 
 
-      <div className='card text-4xl text-center bg-pink my-6' data-aos="fade-left">
+ <div className='cards'>
+
+      <div className='card text-4xl text-center bg-pink my-6' data-aos="fade-up">
         <img className='banner' src='assets/banners/1.png'></img>
         
             <h3 className='mt-4 ml-6 text-yellow'>Niveles de Niveles</h3>
@@ -78,9 +80,9 @@ function App() {
             
 
             </div>
-      </div>
+      </div> 
 
-      <div className='card text-4xl text-center bg-salmon my-6' data-aos="fade-right">
+       <div className='card text-4xl text-center bg-salmon my-6' data-aos="fade-up">
         <img className='banner' src='assets/banners/2.png'></img>
         
             <h3 className='mt-4 ml-6 text-pink'>Devoided</h3>
@@ -91,9 +93,9 @@ function App() {
             <i className="text-pink icon mx-6 fa-solid fa-link"></i>
 
             </div>
-      </div>
+      </div> 
 
-      <div className='card text-4xl text-center bg-yellow my-6' data-aos="fade-left">
+      <div className='card text-4xl text-center bg-yellow my-6' data-aos="fade-up">
         <img className='banner' src='assets/banners/3.png'></img>
         
             <h3 className='mt-4 ml-6 text-orange'>Flower pcb nfc card</h3>
@@ -104,7 +106,7 @@ function App() {
             </div>
       </div>
 
-      <div className='card text-4xl text-center bg-lime my-6' data-aos="fade-right">
+      <div className='card text-4xl text-center bg-lime my-6' data-aos="fade-up">
         <img className='banner' src='assets/banners/4.png'></img>
         
             <h3 className='mt-4 ml-6 text-orange'>Hackathon projects</h3>
@@ -113,23 +115,23 @@ function App() {
               <a href='https://devpost.com/awangran' target='_blank'> <i className="text-orange icon mx-6 fa-solid fa-link"></i></a>
            
             </div>
-      </div>
+      </div> 
 
-      <div className='card text-4xl text-center bg-green my-6' data-aos="fade-left">
+      <div className='card text-4xl text-center bg-green my-6' data-aos="fade-up">
         <img className='banner' src='assets/banners/5.png'></img>
         
             <h3 className='mt-4 ml-6 text-pink'>Shu</h3>
             <p className='text-xl ml-6 text-pink'>Local media library with a twist. Coming soon...</p>
             
             <div>
-            {/* <i className="text-orange icon mx-6 fa-brands fa-github"></i> */}
+            <i className="text-orange icon mx-6 fa-brands fa-github"></i> 
             </div>
       </div>
 
-    </div>
+     </div> 
 
 
-    </section>
+     </section>  
 
     <section id='awards' data-aos='fade-up'>
     <h2 className='text-6xl overflow'>awards / experience</h2>
@@ -153,10 +155,10 @@ function App() {
 
     </section>
 
-
     <section id='socials' data-aos='fade-up'>
     <h2 className='text-6xl'>socials</h2>
     <p className=''>interested in what i do? send an email to work together <br></br>or stalk my social media</p>
+    
     <div className='my-socials my-10'>
       <div className='socialdiv'>
         <div className='headshot'>
@@ -182,7 +184,9 @@ function App() {
     </section>
     
     </div>
+
     </div>
+
     </>
   )
 }

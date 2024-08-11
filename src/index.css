@@ -10,8 +10,6 @@
   -moz-osx-font-smoothing: grayscale;
   height: 100vh;
   width: 100vw;
-  scroll-behavior: smooth;
-  overflow-x: clip;
 
 }
 
@@ -54,7 +52,6 @@ body {
   justify-content: center;
   background: linear-gradient(180deg, rgb(242, 255, 236) 0%, rgba(205,234,192,1) 20%, rgba(225,209,166,1) 40%, rgba(255,172,129,1) 60%, rgba(255,146,139,1) 81%);
   -webkit-box-sizing: border-box;
-  overflow-x: hidden;
 }
 
 #main {
