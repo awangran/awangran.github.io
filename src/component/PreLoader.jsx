@@ -10,9 +10,9 @@ const PreLoader = () => {
   return (
     <div className='preloader'>
       <div className='text-container'>
-      <span><img className='cats' src='/assets/cat1.svg'></img></span>
-      <span><img className='cats' src='/assets/cat2.svg'></img></span>
-      <span><img className='cats' src='/assets/cat3.svg'></img></span>
+      <span><img className='cats' src='/images/cat1.svg'></img></span>
+      <span><img className='cats' src='/images/cat2.svg'></img></span>
+      <span><img className='cats' src='/images/cat3.svg'></img></span>
       </div>
 
     </div>

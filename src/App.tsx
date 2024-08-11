@@ -163,11 +163,11 @@ function App() {
           
         </div>
         <div className='socialbar'>
-          <a href='github.com/awangran/' target='_blank'><i className="text-yellow iconbar mx-4 fa-brands fa-github"></i></a>
-        <a href='' target='_blank'><i className="text-yellow iconbar mx-4 fa-regular fa-envelope"></i></a>
-        <a href='https://www.linkedin.com/in/ashlee-yin-romero-63204223a/' target='_blank'><i className="text-yellow iconbar mx-4 fa-brands fa-linkedin-in"></i></a>
-        <a href='' target='_blank'><i className="text-yellow iconbar mx-4 fa-brands fa-slack"></i></a>
-
+          <a href='https://github.com/awangran' target='_blank'><i className="text-yellow iconbar mx-4 fa-brands fa-github"></i></a>
+          {/* <a href='' target='_blank'><i className="text-yellow iconbar mx-4 fa-regular fa-envelope"></i></a> */}
+          <a href='https://www.linkedin.com/in/ashlee-yin-romero-63204223a/' target='_blank'><i className="text-yellow iconbar mx-4 fa-brands fa-linkedin-in"></i></a>
+          {/* <a href='' target='_blank'><i className="text-yellow iconbar mx-4 fa-brands fa-slack"></i></a> */}
+          <p className='mail'> inquiries.ayin@gmail.com</p>
         </div>
 
       </div>

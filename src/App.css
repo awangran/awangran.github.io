@@ -182,6 +182,19 @@ ul{
   flex-direction: column;
 }
 
+
+
+@media (max-width: 768px) {
+  .socialbar {
+    display: flex;
+    flex-direction: column; 
+  }
+
+  .mail{
+  word-break: break-all;
+  }
+}
+
 .headshot{
   width: 40%;
   margin-bottom: 40px;
