@@ -118,13 +118,13 @@ function App() {
       </div> 
 
       <div className='card text-4xl text-center bg-green my-6' data-aos="fade-up">
-        <img className='banner' src='/images/banners/5.png'></img>
+        <img className='banner' src='/images/banners/66.png'></img>
         
             <h3 className='mt-4 ml-6 text-pink'>Shu</h3>
-            <p className='text-xl ml-6 text-pink'>Local media library with a twist. Coming soon...</p>
+            <p className='text-xl ml-6 text-pink'>Local media library for geeks.</p>
             
             <div>
-            <i className="text-orange icon mx-6 fa-brands fa-github"></i> 
+            <a href='https://github.com/awangran/shu-app' target='_blank'><i className="text-orange icon mx-6 fa-brands fa-github"></i> </a>
             </div>
       </div>
 
