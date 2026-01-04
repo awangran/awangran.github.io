@@ -28,12 +28,12 @@ export default function Home() {
         items = {menuItems}
         socialItems = {socialItems}
       />
-      <div className="w-xl flex align-top">
+      <div className="w-xl h-full flex items-start">
       <CurvedLoop 
         marqueeText="Welcome ✦ To ✦ My ✦ Portfolio ✦ Website ✦"
         speed={2}
         curveAmount={500}
-        direction="right"
+        direction="left"
         interactive={true}
         className="custom-text-style"
       />
