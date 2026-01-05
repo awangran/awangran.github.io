@@ -109,7 +109,7 @@ const CurvedLoop: FC<CurvedLoopProps> = ({
 
   return (
     <div
-      className="min-h-screen flex items-start justify-center w-full"
+      className=" flex items-start justify-center w-2xl mb-15"
       style={{ visibility: ready ? 'visible' : 'hidden', cursor: cursorStyle }}
       onPointerDown={onPointerDown}
       onPointerMove={onPointerMove}
