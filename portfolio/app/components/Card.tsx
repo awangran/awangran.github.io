@@ -8,14 +8,16 @@ interface CardProps {
   skill: string;
   description: string;
   imagesrc: string;
+  link: string;
 }
 
-export default function Card({
+export default function CardGlass({
   title,
   category,
   skill,
   description,
-  imagesrc
+  imagesrc,
+  link
 }: CardProps) {
   const [open, setOpen] = useState(false);
 
@@ -25,7 +27,7 @@ export default function Card({
       {/* Card */}
       <div className="relative flex h-full max-w-md min-w-sm overflow-hidden rounded-3xl bg-gray-200 dark:bg-neutral-900 col-span-1 row-span-1">
         {/* Overlay gradient */}
-        <img className="h-full w-full transition duration-500 blur-sm scale-100 absolute inset-0 object-cover z-10" src={imagesrc} loading="lazy" alt="Digital Agency’s Website"></img>
+        <img className="h-full w-full transition duration-500 blur-sm scale-100 absolute inset-0 object-cover z-10" src={imagesrc} loading="lazy" alt="Image uwu"></img>
         <div className="absolute inset-0 z-20 bg-gradient-to-b from-white/70 via-white/25 to-white/50 backdrop-blur-lg backdrop-saturate-150" />
             <div className="absolute inset-0 z-30 ring-1 ring-white/40 rounded-3xl pointer-events-none" />
 
@@ -77,6 +79,10 @@ export default function Card({
 
           {/* Modal content */}
           <div className="relative z-10 w-[90%] max-w-lg rounded-3xl bg-white dark:bg-neutral-900 p-6 md:p-8 shadow-2xl">
+            
+            <div className="mb-5">        
+              <img className="object-contain rounded-lg max-h-32 w-full transition " src={imagesrc} loading="lazy" alt="Imagen aqui uwu"></img>
+            </div>
             <h3 className="text-sm uppercase tracking-wide text-prettyp">
               {category}
             </h3>
@@ -87,6 +93,7 @@ export default function Card({
             <p className="mt-4 text-gun ">
               {description}
             </p>
+            <a href={link} target="_blank"><p className="text-prettyp underline decoration-wavy mt-2">More info</p></a>
 
             <div className="mt-6 flex justify-end">
               <button

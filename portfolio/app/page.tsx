@@ -6,7 +6,9 @@ import SplitText from "./components/SplitText";
 import ScrollVelocity from './components/ScrollText';
 import LogoLoop from './components/LogoLoop';
 import LogisticBifurcation from './components/Log'
-import Card from './components/Card'
+import CardGlass from './components/Card'
+import CardSwap, { Card } from './components/CardSwap'
+
 
 import { SiReact, SiNextdotjs, SiTypescript, SiTailwindcss, SiNodedotjs, SiMongodb, SiWordpress, SiPython, SiFigma, SiGit, SiFirebase } from 'react-icons/si';
 import { useEffect, useRef, useState } from "react";
@@ -55,9 +57,41 @@ const socialItems = [
   { label: 'LinkedIn', link: 'https://linkedin.com' }
 ];
 
+const projects = [
+ 
+  { title: 'Niveles de Niveles', category: 'Web Dev / Mobile', skill: 'React Native', description: 'An early warning application that mitigate the consequences of natural disasters. This project won the XVII Concurso Nacional de Programación in Colombia. It is made with react-native with the use of websockets to provide aid to people in disaster prone areas. The app is free and published to the App Store and Google Play store.'
+  , imagesrc: '/assets/niveles.webp', link: 'https://github.com/NotARoomba/NivelesDeNiveles'},
+  {title: 'Mommaharbour', category: 'Ecommerce / Freelance', skill:'Wordpress.org', description: 'A simple ecommerce website for a clothing brand. Payment integration done with Wompi API and development done with Wordpress.org.'
+  ,imagesrc:'/assets/momma.webp', link:'https://mommaharbour.com'},
+  {title: 'Pragma', category: 'Web Dev / Mobile', skill:'NextJS / Expo / Figma', description: 'WIP A webapp designed for the 2026 Colombian presidential elections in order for youth to get to know better candidates for different political positions, their proposals, news and guides related to make the voting process more transparent for the younger generation.'
+  ,imagesrc:'/assets/pragma.webp', link:''},
+  {title: 'LetMeCook', category: 'Web Dev', skill:'React / MongoDB / NodeJS', description: 'Since I do not know how to cook and have terrible meal planning skills, I developed an app that takes in all your fridge items, keeps track how fresh they are, and generates recipes based on them. '
+  ,imagesrc:'/assets/letmecook.webp', link:'https://github.com/awangran/letmecook'},
+  {title: 'HearingAid', category: 'Web Dev', skill:'React / MUI / NodeJS', description: 'Digital notebook designed for people with hearing limitations that depend on interpreters for understanding and participating in classes. Shows subtitles for lessons, allows to ask questions to teacher, and creates summaries with AI.'
+  ,imagesrc:'/assets/hearingaid.webp', link:'https://github.com/awangran/hearingAId'},
+  {title: 'Devoided', category: 'Game Dev', skill:'Unity / Digital Drawing', description: 'Devoided is an RPG game developed in a hackathon about quantum engineer that explores space-time in search of traces of a deck of ancient Earth, but in his search he becomes trapped in the past. Developed with Unity, and sprites were digitally drawn by me.'
+  ,imagesrc:'/assets/devoided.webp', link:'https://github.com/NotARoomba/Devoided'},
+  {title: 'Shu', category: 'Web Dev', skill:'React / MUI / NodeJS', description: 'Simple React app library to store your embarrasing taste in media.'
+  ,imagesrc:'/assets/shu.webp', link:''},
+  {title: 'Flower PCB Card', category: 'Electronics', skill:'EasyEDA', description: 'Flower shaped pcb with nfc chip. Design focused electronics project that works as a presentation card and keychain. Inspired by Hack Club Hacker card tutorial. Design and wireframe done by myself with EasyEDA. Manufactured with JLCPCB!'
+  ,imagesrc:'/assets/flowerpcb.webp', link:'https://github.com/awangran/shu-app'},
+  {title: 'FitConnect', category: 'Mockup / Freelance', skill:'Vanilla JS', description: 'Gym website mockup with simple auth, classes reservations, posts, account info, etc. Comissioned.'
+  ,imagesrc:'/assets/fitconnect.webp', link:'https://the-fit-connect.vercel.app'},
+  {title: 'Hackathons', category: 'Others', skill:'Others', description: 'Past fun hackathon projects done through devpost in my highschool days. Hackathon projects that are created based on problematics like food oasis, reading disabilities, cerebral palsy research, etc.'
+  ,imagesrc:'/assets/hackaton.webp', link:'https://devpost.com/awangran'}
+ 
+ 
+ 
+];
+
+
 
 export default function Home() {
   const toggleBtnRef = useRef<HTMLButtonElement | null>(null);
+
+  const handleCardClick = () => {
+    
+  }
 
  
   return (
@@ -87,7 +121,7 @@ export default function Home() {
       items-center mb-10
 ">
      
-      <img src="/assets/flowers.PNG" alt="" 
+      <img src="/assets/flowers.webp" alt="" 
       max-width={700}
       className=""
       width="50%"
@@ -155,34 +189,95 @@ export default function Home() {
 
       <div className="flex flex-wrap flex-row gap-4 justify-center w-full p-5">
 
-      
-      <Card
-        title="Logistic Bifurcation Explorer"
-        category="Creative Coding"
-        skill="WebGL / Chaos"
-        description="An interactive GPU-powered visualization of the logistic map bifurcation diagram, exploring nonlinear dynamics and emergent behavior."
-        imagesrc="/assets/flowers.PNG"
+      {projects.map((item) => (
+        <CardGlass
+        key={item.title}
+        title={item.title}
+        category={item.category}
+        skill={item.skill}
+        description={item.description}
+        imagesrc={item.imagesrc}
+        link={item.link}
       />
 
-      <Card
-              title="Logistic Bifurcation Explorer"
-              category="Creative Coding"
-              skill="WebGL / Chaos"
-              description="An interactive GPU-powered visualization of the logistic map bifurcation diagram, exploring nonlinear dynamics and emergent behavior."
-              imagesrc="/assets/flowers.PNG"
-            />
+      ))}
 
-      <Card
-              title="Logistic Bifurcation Explorer"
-              category="Creative Coding"
-              skill="WebGL / Chaos"
-              description="An interactive GPU-powered visualization of the logistic map bifurcation diagram, exploring nonlinear dynamics and emergent behavior."
-              imagesrc="/assets/flowers.PNG"
-           />
+      
       </div>
 
 
-      </div>
+          <div className="relative">
+            {/* White fade-in gradient */}
+            <div className="pointer-events-none absolute -top-5 left-0 right-0 h-32 z-10
+            bg-gradient-to-b from-white via-white/70 to-transparent blur-sm" />
+
+            <div className="bg-brightg flex flex-col lg:flex-row pt-32 pl-5">
+              <div className="lg:w-1/2 md:w-1/2 flex flex-col justify-center ">
+                <h1 className=" text-right font-bold text-6xl text-prettyp py-10 sm:py-2" >EXPERIENCE & AWARDS</h1>
+                <p className="text-right text-xl text-prettyp"> ✦ Click or hover to pause ✦ </p>
+              </div>
+
+              <div style={{ overflow: 'hidden', position: 'relative' }} className="w-full lg:h-[600px] md:h-[600px] h-[400px]">
+                <CardSwap
+                  cardDistance={55}
+                  verticalDistance={105}
+                  easing="linear"
+                  pauseOnHover
+                  onCardClick={handleCardClick}
+                  skewAmount={4}
+                  height={500}
+                  width={700}
+
+                >
+                  <Card>
+                    <h2> ≽^•⩊•^≼ Work Experience</h2>
+                    <div className="context">
+                      <ul>
+                        <li>Freelance Web Developer '21 - Present</li>
+                        <li>Research Assistant Andes University Cupitaller '26</li>
+                        <li>TA Andes University Intro to Programming Honors '25</li>
+                        <li>TA Andes University Mathematical Foundations of Computation '25</li>
+                        <li>Bow Seat Future Blue Youth Council Member '22</li>
+                        
+                      </ul>
+                    </div>
+                  </Card>
+                  <Card>
+                    <h2> ฅ^•⩊•^ฅ Awards </h2>
+                    <div className="context">
+                      <ul>
+                        <li>1st Place VI Colombian National High School <a href="https://www.colombiaaprende.edu.co/agenda/eventos/barranquilla-san-gil-y-canasgordas-son-los-ganadores-del-vii-concurso-nacional-de" target="_blank">Programming Contest</a></li>
+                        <li>1st Place <a href="https://ingenieria.uniandes.edu.co/es/ganadores-semana-de-la-innovacion" target="_blank">ExpoAndes</a> Engineering Projects Andes University</li>
+                        <li>1st LIT Enviromental Engineering Contest Anahuac Merida University</li>
+                        <li>1st Overall Do-Re-Mi-Hacks, Major Hacking League</li>
+                        <li>1st Katy Youth Hacks hackathon, Girls Who Code</li>
+                        <li>2nd Place LIT Game Jam Anahuac Merida University</li>
+                        <li>2nd Place <a href="https://www.uninorte.edu.co/es/web/grupo-prensa/w/ganadores-del-data-challenge-crean-soluciones-a-partir-de-la-ciencia-de-datos" target="_blank"></a>Data Science Competition 2023, Universidad del Norte</li>
+                      </ul>
+                    </div>
+                  </Card>
+                  <Card>
+                    <h2> /ᐠ - ˕ -マ ᶻ 𝗓 𐰁 Extra</h2>
+                    <div className="context">
+                      <ul>
+                        <li>Daydream Hackathon Organizer Barranquilla's biggest HS hackathon w/ Hack Club</li>
+                        <li>Bow Seat Ocean Awareness program Fellowship Grant Winner</li>
+                        <li>Intro to Quantum Computing Year Long course scholarship w/ Qubit x Qubit & IBM</li>
+                        <li>Quantum Poster presentation @ Colombia's National Mathematics Congress</li>
+                        <li>Complex Network Engineering Summer Academy @ UPenn</li>
+                        <li>I do digital drawing as a hobby!</li>
+                      </ul>
+                    </div>
+                  </Card>
+                  
+
+                </CardSwap>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
       
       
 
