@@ -33,6 +33,7 @@
 
 .card div{
   padding: 20px;
+  
 }
 
 .card ul {
@@ -40,6 +41,15 @@
   list-style-type: disc;
   list-style-position: inside;
   line-height: 2;
+  
+
+
+}
+
+.card a{
+  text-decoration-line: underline;
+  text-decoration-style: wavy;
+  text-decoration-thickness: 2px;
 
 }
 

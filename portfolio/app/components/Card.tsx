@@ -78,7 +78,9 @@ export default function CardGlass({
           />
 
           {/* Modal content */}
-          <div className="relative z-10 w-[90%] max-w-lg rounded-3xl bg-white dark:bg-neutral-900 p-6 md:p-8 shadow-2xl">
+          <div className="relative z-10 w-[90%] max-w-lg rounded-3xl bg-white dark:bg-neutral-900 p-6 md:p-8 shadow-2xl
+           
+          ">
             
             <div className="mb-5">        
               <img className="object-contain rounded-lg max-h-32 w-full transition " src={imagesrc} loading="lazy" alt="Imagen aqui uwu"></img>

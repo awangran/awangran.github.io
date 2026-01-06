@@ -213,8 +213,8 @@ export default function Home() {
 
             <div className="bg-brightg flex flex-col lg:flex-row pt-32 pl-5">
               <div className="lg:w-1/2 md:w-1/2 flex flex-col justify-center ">
-                <h1 className=" text-right font-bold text-6xl text-prettyp py-10 sm:py-2" >EXPERIENCE & AWARDS</h1>
-                <p className="text-right text-xl text-prettyp"> ✦ Click or hover to pause ✦ </p>
+                <h1 className=" text-right font-bold text-6xl text-prettyp lg:py-10 md:py-10 py-2 px-2" >EXPERIENCE & AWARDS</h1>
+                <p className="text-right text-xl text-prettyp  px-2 mb-5"> ✦ Click or hover to pause ✦ </p>
               </div>
 
               <div style={{ overflow: 'hidden', position: 'relative' }} className="w-full lg:h-[600px] md:h-[600px] h-[400px]">
@@ -237,7 +237,7 @@ export default function Home() {
                         <li>Research Assistant Andes University Cupitaller '26</li>
                         <li>TA Andes University Intro to Programming Honors '25</li>
                         <li>TA Andes University Mathematical Foundations of Computation '25</li>
-                        <li>Bow Seat Future Blue Youth Council Member '22</li>
+                        <li>Bow Seat <a href="https://bowseat.org/programs/future-blue-youth-council/fbyc-alumni/" target="_blank">Future Blue Youth Council Member</a> '22</li>
                         
                       </ul>
                     </div>
@@ -246,9 +246,9 @@ export default function Home() {
                     <h2> ฅ^•⩊•^ฅ Awards </h2>
                     <div className="context">
                       <ul>
-                        <li>1st Place VI Colombian National High School <a href="https://www.colombiaaprende.edu.co/agenda/eventos/barranquilla-san-gil-y-canasgordas-son-los-ganadores-del-vii-concurso-nacional-de" target="_blank">Programming Contest</a></li>
+                        <li>1st Place VI Colombian National <a href="https://www.colombiaaprende.edu.co/agenda/eventos/barranquilla-san-gil-y-canasgordas-son-los-ganadores-del-vii-concurso-nacional-de" target="_blank">Programming Contest</a></li>
                         <li>1st Place <a href="https://ingenieria.uniandes.edu.co/es/ganadores-semana-de-la-innovacion" target="_blank">ExpoAndes</a> Engineering Projects Andes University</li>
-                        <li>1st LIT Enviromental Engineering Contest Anahuac Merida University</li>
+                        <li>1st LIT Enviromental Engineering Contest Anahuac University</li>
                         <li>1st Overall Do-Re-Mi-Hacks, Major Hacking League</li>
                         <li>1st Katy Youth Hacks hackathon, Girls Who Code</li>
                         <li>2nd Place LIT Game Jam Anahuac Merida University</li>
@@ -260,11 +260,12 @@ export default function Home() {
                     <h2> /ᐠ - ˕ -マ ᶻ 𝗓 𐰁 Extra</h2>
                     <div className="context">
                       <ul>
-                        <li>Daydream Hackathon Organizer Barranquilla's biggest HS hackathon w/ Hack Club</li>
+                        <li><a href="https://barranquilla.gov.co/mi-barranquilla/daydream-barranquilla-2025-tres-estudiantes-de-la-humboldt-ganaron-primer-puesto" target="_blank">Daydream Hackathon</a> Organizer w/ Hack Club</li>
+                        <li><a href="https://icarusclub.org" target="_blank">Icarus Club Embassador Barranquilla Tech Club</a></li>
                         <li>Bow Seat Ocean Awareness program Fellowship Grant Winner</li>
-                        <li>Intro to Quantum Computing Year Long course scholarship w/ Qubit x Qubit & IBM</li>
-                        <li>Quantum Poster presentation @ Colombia's National Mathematics Congress</li>
-                        <li>Complex Network Engineering Summer Academy @ UPenn</li>
+                        <li>Intro to Quantum Computing Year scholarship w/ Qubit x Qubit & IBM</li>
+                        <li><a href="https://www.linkedin.com/posts/ashlee-yin-romero-63204223a_xxiv-national-mathematics-congress-2025-in-activity-7347718411830919169-v5k5?utm_source=share&utm_medium=member_desktop&rcm=ACoAADtzNQYBonAl99KsI66xJkr_k-gKUJ859IE" target="_blank">Quantum Poster</a> presentation @ Colombia's National Mathematics Congress</li>
+                        <li><a href="https://youtu.be/tVggh02uWec" target="_blank">Complex Network</a> Engineering Summer Academy @ UPenn</li>
                         <li>I do digital drawing as a hobby!</li>
                       </ul>
                     </div>
