@@ -1,9 +1,12 @@
+/* CardSwap.css */
+
 .card-swap-container {
   position: absolute;
   bottom: 0;
   right: 0;
-  transform: translate(5%, 20%);
-  transform-origin: bottom right;
+  /* Center the stack relative to the container for better mobile layout */
+  transform: translate(-5%, 10%); 
+  transform-origin: center center;
 
   perspective: 900px;
   overflow: visible;
@@ -21,47 +24,68 @@
   will-change: transform;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
-
+  
+  /* Ensure padding doesn't affect width calculations */
+  box-sizing: border-box; 
 }
 
+/* Responsive Typography 
+   Using clamp ensures fonts scale smoothly between desktop and mobile 
+*/
 .card h2 {
   padding: 10px;
   color: #F8A2BF;
-  font-size: x-large;
+  font-size: clamp(1.2rem, 4vw, 1.8rem); /* Min 1.2rem, Max 1.8rem */
   border-bottom: 5px solid #F8A2BF;
+  margin: 0;
 }
 
-.card div{
-  padding: 20px;
-  
+.card div {
+  padding: 15px; /* Slightly reduced padding for mobile */
 }
 
+/* Fixed selector: was .ul, changed to .card ul */
 .card ul {
   color: #f27ea5;
   list-style-type: disc;
   list-style-position: inside;
-  line-height: 2;
-  
-
-
+  line-height: 1.6; /* Tighter line height for better mobile fit */
+  font-size: clamp(0.9rem, 2.5vw, 1.1rem); /* Responsive list text */
+  margin: 0;
+  padding: 0 10px;
 }
 
-.card a{
+.card a {
   text-decoration-line: underline;
   text-decoration-style: wavy;
   text-decoration-thickness: 2px;
-
 }
 
+/* --- Mobile Specific Overrides --- */
 
 @media (max-width: 768px) {
   .card-swap-container {
-    transform: scale(0.75) translate(25%, 25%);
+    right: 50%;
+    transform: translateX(50%) translateY(10%); /* Centers the stack horizontally */
   }
 }
 
 @media (max-width: 480px) {
   .card-swap-container {
-    transform: scale(0.55) translate(25%, 25%);
+    right: 40%;
+    bottom: 5%;
+    transform: translateX(50%); /* Centers the stack horizontally */
+  }
+  
+  .card {
+    border-width: 3px; /* Thinner border on mobile to save space */
+  }
+
+  .card h2 {
+    padding: 8px;
+  }
+  
+  .card div {
+    padding: 10px;
   }
 }

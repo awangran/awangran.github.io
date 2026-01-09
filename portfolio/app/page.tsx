@@ -10,10 +10,12 @@ import CardGlass from './components/Card'
 import CardSwap, { Card } from './components/CardSwap'
 
 
-import { SiReact, SiNextdotjs, SiTypescript, SiTailwindcss, SiNodedotjs, SiMongodb, SiWordpress, SiPython, SiFigma, SiGit, SiFirebase } from 'react-icons/si';
+import { SiReact, SiNextdotjs, SiTypescript, SiTailwindcss, SiNodedotjs, SiMongodb, SiWordpress, SiPython, SiFigma, SiGit, SiFirebase, SiMailboxdotorg } from 'react-icons/si';
 import { useEffect, useRef, useState } from "react";
 import { DiJava } from "react-icons/di";
 import { FaHtml5, FaCss3Alt } from "react-icons/fa";
+import { IoIosMail, IoLogoLinkedin } from "react-icons/io";
+
 
 
 const techLogos = [
@@ -46,10 +48,11 @@ const imageLogos = [
 
 
 const menuItems = [
-  { label: 'Home', ariaLabel: 'Go to home page', link: '/' },
-  { label: 'About', ariaLabel: 'Learn about us', link: '/about' },
-  { label: 'Skills', ariaLabel: 'View our services', link: '/services' },
-  { label: 'Works', ariaLabel: 'Get in touch', link: '/contact' }
+  { label: 'Home', ariaLabel: 'Go to home page', link: '#home' },
+  { label: 'Skills', ariaLabel: 'skills', link: '#skills' },
+  { label: 'Works', ariaLabel: 'works', link: '#works' },
+  { label: 'Experience', ariaLabel: 'experience', link: '#experience' }
+
 ];
 
 const socialItems = [
@@ -105,7 +108,7 @@ export default function Home() {
         socialItems = {socialItems}
       />
 
-      <div className="w-full flex items-start justify-center">
+      <div className="w-full flex items-start justify-center" id="home">
       <CurvedLoop 
         marqueeText="Welcome ✦ To ✦ My ✦ Portfolio ✦ Website ✦ ≽^•⩊•^≼"
         speed={2}
@@ -164,7 +167,7 @@ export default function Home() {
 
       
 
-      <div className="">
+      <div className="" id="skills">
     
       <h1 className=" text-center font-bold text-6xl text-lightp mb-10" >TOOLSTACK</h1>
 
@@ -184,8 +187,8 @@ export default function Home() {
       </div>
       </div>
 
-      <div>
-      <h1 className=" text-center font-bold text-6xl text-prettyp my-10" >RECENT PROJECTS</h1>
+      <div >
+      <h1 id='works' className=" text-center font-bold text-6xl text-prettyp my-10" >RECENT PROJECTS</h1>
 
       <div className="flex flex-wrap flex-row gap-4 justify-center w-full p-5">
 
@@ -211,22 +214,23 @@ export default function Home() {
             <div className="pointer-events-none absolute -top-5 left-0 right-0 h-32 z-10
             bg-gradient-to-b from-white via-white/70 to-transparent blur-sm" />
 
-            <div className="bg-brightg flex flex-col lg:flex-row pt-32 pl-5">
+            <div className="bg-brightg flex flex-col lg:flex-row pt-32 pl-5" id="experience">
               <div className="lg:w-1/2 md:w-1/2 flex flex-col justify-center ">
                 <h1 className=" text-right font-bold text-6xl text-prettyp lg:py-10 md:py-10 py-2 px-2" >EXPERIENCE & AWARDS</h1>
                 <p className="text-right text-xl text-prettyp  px-2 mb-5"> ✦ Click or hover to pause ✦ </p>
               </div>
 
-              <div style={{ overflow: 'hidden', position: 'relative' }} className="w-full lg:h-[600px] md:h-[600px] h-[400px]">
+              <div style={{ overflow: 'hidden', position: 'relative' }} className="w-full lg:h-[600px] md:h-[600px] h-[600px]">
                 <CardSwap
-                  cardDistance={55}
-                  verticalDistance={105}
+                  width="clamp(300px, 90vw, 700px)"
+                  height="clamp(350px, 50vh, 500px)"
+                  cardDistance={40} 
+                  verticalDistance={80} // Adjusted to fit tighter vertical space
                   easing="linear"
                   pauseOnHover
                   onCardClick={handleCardClick}
                   skewAmount={4}
-                  height={500}
-                  width={700}
+                  
 
                 >
                   <Card>
@@ -277,13 +281,49 @@ export default function Home() {
             </div>
           </div>
 
+          <div className="bg-prettyp p-6 md:p-12 lg:p-18 flex flex-col lg:flex-row w-full gap-8 items-start">
+
+          <h2 className="text-left font-bold text-4xl md:text-5xl lg:text-6xl text-lightp whitespace-nowrap">
+            GET IN TOUCH
+          </h2>
+          
+          <div className="flex flex-col gap-6">
+            <p className="text-lightp text-base md:text-lg max-w-2xl">
+              Thank you for visiting my portfolio. I'm always open to discussing new opportunities, potential collaborations, or challenging projects that align with my skills!
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-3">
+              
+              <span className="flex items-center gap-2 bg-lightp w-fit p-2 rounded-md shadow-lg">
+                <IoIosMail className="text-2xl md:text-4xl text-prettyp shrink-0" /> 
+                <p className="text-sm md:text-xl text-prettyp break-all">inquiries.ayin@gmail.com</p>
+              </span>
+
+              <a 
+                href="https://www.linkedin.com/in/ashlee-yin-romero-63204223a/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="block"
+              >
+                <span className="flex items-center gap-2 bg-lightp w-fit p-2 rounded-md shadow-lg hover:scale-105 transition-transform">
+                  <IoLogoLinkedin className="text-2xl md:text-4xl text-prettyp shrink-0" /> 
+                  <p className="text-sm md:text-xl text-prettyp">Ashlee Yin</p>
+                </span>
+              </a>
+
+            </div>
+          </div>
+        </div>
+
+          
+
 
         </div>
       
       
 
       
-      
+      <div className="p-2 bg-prettyp text-bold text-lightp">@Awangran 2026 All rights reserved</div>
       
     </div>
     
