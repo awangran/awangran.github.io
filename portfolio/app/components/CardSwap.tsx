@@ -68,7 +68,7 @@ const CardSwap: React.FC<CardSwapProps> = ({
   height = 400,
   cardDistance = 60,
   verticalDistance = 70,
-  delay = 5000,
+  delay = 4000,
   pauseOnHover = false,
   onCardClick,
   skewAmount = 6,
@@ -102,6 +102,10 @@ const CardSwap: React.FC<CardSwapProps> = ({
   const tlRef = useRef<gsap.core.Timeline | null>(null);
   const intervalRef = useRef<number>(0);
   const container = useRef<HTMLDivElement>(null);
+
+  // 1. New Refs for state management
+  const isPausedRef = useRef(false); 
+  const toggleRef = useRef<() => void>(() => {});
 
   useEffect(() => {
     const total = refs.length;
@@ -165,28 +169,76 @@ const CardSwap: React.FC<CardSwapProps> = ({
       });
     };
 
-    swap();
-    intervalRef.current = window.setInterval(swap, delay);
+    // 2. Define internal play/pause controls
+    const startTimer = () => {
+      // Clear existing to avoid duplicates
+      clearInterval(intervalRef.current);
+      intervalRef.current = window.setInterval(swap, delay);
+    };
 
+    const stopTimer = () => {
+      clearInterval(intervalRef.current);
+    };
+
+    const resumeAnimation = () => {
+      tlRef.current?.play();
+      startTimer();
+    };
+
+    const pauseAnimation = () => {
+      tlRef.current?.pause();
+      stopTimer();
+    };
+
+    // 3. Assign the toggle logic to the ref so onClick can access it
+    toggleRef.current = () => {
+      if (isPausedRef.current) {
+        // Currently paused, so we resume
+        resumeAnimation();
+        // If the timeline isn't currently active (we are in the wait gap), 
+        // trigger a swap immediately for better responsiveness
+        if (!tlRef.current || !tlRef.current.isActive()) {
+            swap();
+        }
+        isPausedRef.current = false;
+      } else {
+        // Currently playing, so we pause
+        pauseAnimation();
+        isPausedRef.current = true;
+      }
+    };
+
+    // Initial Start
+    swap();
+    startTimer();
+    
+    // 4. Update Hover Logic to respect manual pause
     if (pauseOnHover) {
       const node = container.current!;
-      const pause = () => {
-        tlRef.current?.pause();
-        clearInterval(intervalRef.current);
+      
+      const onEnter = () => {
+        // Always pause on hover
+        pauseAnimation();
       };
-      const resume = () => {
-        tlRef.current?.play();
-        intervalRef.current = window.setInterval(swap, delay);
+
+      const onLeave = () => {
+        // Only resume if the user hasn't manually clicked to pause
+        if (!isPausedRef.current) {
+          resumeAnimation();
+        }
       };
-      node.addEventListener('mouseenter', pause);
-      node.addEventListener('mouseleave', resume);
+
+      node.addEventListener('mouseenter', onEnter);
+      node.addEventListener('mouseleave', onLeave);
+
       return () => {
-        node.removeEventListener('mouseenter', pause);
-        node.removeEventListener('mouseleave', resume);
-        clearInterval(intervalRef.current);
+        node.removeEventListener('mouseenter', onEnter);
+        node.removeEventListener('mouseleave', onLeave);
+        stopTimer();
       };
     }
-    return () => clearInterval(intervalRef.current);
+    
+    return () => stopTimer();
   }, [cardDistance, verticalDistance, delay, pauseOnHover, skewAmount, easing]);
 
   const rendered = childArr.map((child, i) =>
@@ -198,6 +250,9 @@ const CardSwap: React.FC<CardSwapProps> = ({
           onClick: e => {
             child.props.onClick?.(e as React.MouseEvent<HTMLDivElement>);
             onCardClick?.(i);
+            
+            // 5. Trigger the toggle
+            toggleRef.current();
           }
         } as CardProps & React.RefAttributes<HTMLDivElement>)
       : child

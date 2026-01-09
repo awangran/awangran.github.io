@@ -129,7 +129,7 @@ export default function Home() {
 
 
       <SplitText
-        text="Hey! I'm Awangran"
+        text="Hi! I'm Ashlee Yin"
         className="text-4xl md:text-6xl md:text-right lg:text-8xl font-semibold text-wrap wrap-anywhere lg:mr-20
         text-prettyp p-4"
         delay={100}
