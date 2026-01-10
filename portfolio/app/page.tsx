@@ -188,9 +188,9 @@ export default function Home() {
       </div>
 
       <div >
-      <h1 id='works' className=" text-center font-bold text-6xl text-prettyp my-10" >RECENT PROJECTS</h1>
+      <h1 id='works' className=" text-center font-bold text-6xl text-prettyp my-10 mb-5" >RECENT PROJECTS</h1>
 
-      <div className="flex flex-wrap flex-row gap-4 justify-center w-full p-5">
+      <div className="flex flex-wrap flex-row gap-4 justify-center w-full p-5 mb-10">
 
       {projects.map((item) => (
         <CardGlass
