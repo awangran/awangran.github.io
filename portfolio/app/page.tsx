@@ -8,7 +8,7 @@ import LogoLoop from './components/LogoLoop';
 import LogisticBifurcation from './components/Log'
 import CardGlass from './components/Card'
 import CardSwap, { Card } from './components/CardSwap'
-
+import ClientLoader from "./components/ClientLoader";
 
 import { SiReact, SiNextdotjs, SiTypescript, SiTailwindcss, SiNodedotjs, SiMongodb, SiWordpress, SiPython, SiFigma, SiGit, SiFirebase, SiMailboxdotorg } from 'react-icons/si';
 import { useEffect, useRef, useState } from "react";
@@ -92,12 +92,10 @@ const projects = [
 export default function Home() {
   const toggleBtnRef = useRef<HTMLButtonElement | null>(null);
 
-  const handleCardClick = () => {
-    
-  }
 
  
   return (
+    <ClientLoader>
     <div className="flex justify-center bg-ivory w-100vw h-full">
      <div className="h-screen w-screen">
       <StaggeredMenu 
@@ -228,7 +226,6 @@ export default function Home() {
                   verticalDistance={80} // Adjusted to fit tighter vertical space
                   easing="linear"
                   pauseOnHover
-                  onCardClick={handleCardClick}
                   skewAmount={4}
                   
 
@@ -329,5 +326,6 @@ export default function Home() {
     
     
     </div>
+    </ClientLoader>
   );
 }
