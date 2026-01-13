@@ -122,7 +122,7 @@ export default function Home() {
       items-center mb-10
 ">
      
-      <img src="/assets/flowers.webp" alt="" 
+      <img src="/assets/flowers.webp" alt="Flowers.png" 
       max-width={700}
       className=""
       width="50%"

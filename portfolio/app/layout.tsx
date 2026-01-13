@@ -15,8 +15,33 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Awangran",
-  description: "Portfolio de Ashlee",
+  title: "Ashlee Yin | Web Developer & UI/UX Designer",
+  description: "Portfolio of Ashlee Yin, a engineering student specializing in React, Next.js, and high-performance web experiences. View my latest projects and get in touch.",
+
+  openGraph: {
+    title: "Ashlee Yin | Web Developer & UI/UX Designer",
+    description: "Portfolio of Ashlee Yin, a engineering student specializing in React, Next.js, and high-performance web experiences. View my latest projects and get in touch.",
+    url: "https://ashleeyin.com",
+    siteName: "Ashlee Yin Portfolio",
+    images: [
+      {
+        url: "https://ashleeyin.com/preview.png", 
+        width: 1200,
+        height: 630,
+        alt: "Ashlee Yin Portfolio Preview",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Ashlee Yin | Frontend Developer",
+    description: "Building high-performance web applications with Next.js.",
+    images: ["https://ashleeyin.com/preview.png"], 
+  },
+
 };
 
 export default function RootLayout({
